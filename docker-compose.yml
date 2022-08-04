@@ -8,7 +8,7 @@ services:
         env_file:
             - .env
         networks:
-            - networkdidi
+            - studentnetwork
         volumes:
             - pg:/var/lib/postgresql/data
     node_app:
@@ -21,10 +21,10 @@ services:
         env_file:
             - .env
         networks:
-            - networkdidi
+            - studentnetwork
 
 networks:
-    networkdidi:
+    studentnetwork:
         driver: bridge
 
 volumes:
